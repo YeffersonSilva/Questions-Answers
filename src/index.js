@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/preguntar", (req, res) => {
-    res.render("preguntar");
+    res.render("perguntar");
 })
 
 app.listen(8080, () => {
