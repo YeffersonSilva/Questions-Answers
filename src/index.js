@@ -3,20 +3,12 @@ const app = express();
 
 // dicinedo para el express que voy usar view engine
 app.set("view engine", "ejs");
+// definir la carpeta de esataticos css y img
 app.use(express.static("public"));
 
-app.get("/:nome/:lang?", (req, res) => {
-    var nome = req.params.nome;
-    if (req.params.lang) {
-        var lang = req.params.lang;
-    } else lang = "py"
-    
-    
-    res.render("index", {
-        nome: nome,
-        lang: lang,
-        lista: "lista de dados"
-  });
+app.get("/", (req, res) => {
+  
+
 });
 
 app.listen(8080, () => {
