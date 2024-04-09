@@ -7,9 +7,12 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  
-
+    res.render("index");
 });
+
+app.get("/preguntar", (req, res) => {
+    res.render("preguntar");
+})
 
 app.listen(8080, () => {
   console.log("Server is running on port 8080");
