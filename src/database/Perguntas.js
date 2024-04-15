@@ -15,4 +15,6 @@ const Perguntas = connection.define('perguntas', {
     }
 });
 
-Perguntas.sync({ force: false }).then(() => {})
+Perguntas.sync({ force: false }).then(() => { })
+
+module.exports= Perguntas;
