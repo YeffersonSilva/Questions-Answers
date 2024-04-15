@@ -8,7 +8,7 @@ connection
   .authenticate()
   .then(() => {
     console.log("Conexão feita com o banco de dados!");
-  }).cath((msgErro) => {
+  }).catch((msgErro) => {
     console.log(msgErro);
   });
 
