@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/dataBase");
 const Pergunta = require("./database/Perguntas");
+const Resposta = require("./database/Resposta");
+
 
 // Database
 connection
@@ -17,7 +19,7 @@ connection
 // Estou dizendo para o Express usar o EJS como View engine
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-// Body parser
+// Body parser  
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

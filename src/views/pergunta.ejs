@@ -10,7 +10,16 @@
         <hr>
         <p> <%= pergunta.descricao %></p>
             
+        <hr>
 
+        <form action="">
+            <h3>Responda</h3>
+            <label >Resposta:</label>
+            <textarea  placeholder="Degite sua resposta " name="corpo" class="form-control"></textarea> <br>
+            <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
+            <button type="submit" class="btn btn-primary">Responder</button><br>
+            
+        </form>
 
     </div>
 
