@@ -20,9 +20,18 @@ app.use(express.static('public'));
 // Body parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+
 // Rotas
-app.get("/",(req, res) => {
-    res.render("index");
+app.get("/", (req, res) => {
+  Pergunta.findAll({raw: true}).then(perguntas => {
+    res.render("index", {
+      perguntas: perguntas
+    
+    });
+  }
+)
+    
 });
 
 app.get("/perguntar",(req, res) => {
